@@ -10,6 +10,7 @@ import {
 
 import Header from "./Components/Header";
 import Squares from "./Squares/Squares";
+import SignUp from "./Password/SignUp"
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       </header>
 
       <Squares color="hotpink" />
+      <SignUp minLength={12} />
+
 
 
       {/* <Route exact path="/week9-practice-app/challenges" component={Challenges} />
