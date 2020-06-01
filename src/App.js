@@ -10,7 +10,8 @@ import {
 
 import Header from "./Components/Header";
 import Squares from "./Squares/Squares";
-import SignUp from "./Password/SignUp"
+import SignUp from "./Password/SignUp";
+import Button from "./Components/Button"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
       <Squares color="hotpink" />
       <SignUp minLength={12} />
+      <Button handleUpdate={console.log} />
 
 
 
