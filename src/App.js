@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+//importing ReactRouter components to use the functionality
+import {
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
+
+
+import Header from "./Components/Header";
+import Squares from "./Squares/Squares";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+
+      <header >
+        <Header>Practice Makes Perfect</Header>
       </header>
-    </div>
+
+      <Squares color="hotpink" />
+
+
+      {/* <Route exact path="/week9-practice-app/challenges" component={Challenges} />
+
+        <Route exact path="/week9-practice-app/quiz" component={Quiz} /> */}
+
+    </Router>
   );
 }
 
