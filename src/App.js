@@ -11,7 +11,9 @@ import {
 import Header from "./Components/Header";
 import Squares from "./Squares/Squares";
 import SignUp from "./Password/SignUp";
-import Button from "./Components/Button"
+import Button from "./Components/Button";
+import Form from "./Forms/Form";
+import Articles from "./News/Articles";
 
 function App() {
   return (
@@ -21,11 +23,15 @@ function App() {
         <Header>Practice Makes Perfect</Header>
       </header>
 
-      <Squares color="hotpink" />
-      <SignUp minLength={12} />
-      <Button handleUpdate={console.log} />
+      <Route exact path="/week10-practice-app">
+        <Squares color="hotpink" />
+        <SignUp minLength={12} />
+        <Button handleUpdate={console.log} />
+        <Form handleSubmit={console.log} />
+      </Route>
 
 
+      <Route exact path="/week10-practice-app/news" component={Articles} />
 
       {/* <Route exact path="/week9-practice-app/challenges" component={Challenges} />
 

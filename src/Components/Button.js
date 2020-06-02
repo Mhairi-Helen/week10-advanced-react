@@ -28,8 +28,6 @@ class Button extends Component {
 
     //render is about rendering what the user is seeing
     render() {
-
-        let { counter } = this.state
         return (
             <div className="card">
                 <button

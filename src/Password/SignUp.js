@@ -26,7 +26,6 @@ class SignUp extends Component {
         return (
             <>
                 <Password
-                    name="One"
                     label="Enter Password"
                     placeholder={'Enter password...'}
                     valid={valid}
@@ -34,7 +33,6 @@ class SignUp extends Component {
                     value={password}
                 />
                 <Password
-                    name="Two"
                     label="Confirm Password"
                     placeholder={'Confirm password...'}
                     valid={valid}

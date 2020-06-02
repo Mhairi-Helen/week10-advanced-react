@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 
 
@@ -20,10 +20,7 @@ const Square = ({ color, selected, handleClick }) => {
     );
 }
 
-// const Square = ({ color, selected, handleClick }) => {
-
-
-
+// this is another way that style could be written
 //     return (
 //         <div
 //             onClick={handleClick}
@@ -35,7 +32,6 @@ const Square = ({ color, selected, handleClick }) => {
 //             }}
 //         />
 //     );
-// }
 
 
 export default Square;
