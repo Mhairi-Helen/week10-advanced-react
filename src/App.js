@@ -5,6 +5,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Route,
+  Switch,
 } from "react-router-dom";
 
 
@@ -14,6 +15,12 @@ import SignUp from "./Password/SignUp";
 import Button from "./Components/Button";
 import Form from "./Forms/Form";
 import Articles from "./News/Articles";
+import Article from "./News/Article";
+import CreateArticle from "./News/CreateArticle";
+import Clicked from "./Hooks/Clicked";
+import Square from "./Hooks/Square";
+import ToggleText from "./Hooks/ToggleText";
+import Counter from "./Hooks/Counter";
 
 function App() {
   return (
@@ -28,14 +35,27 @@ function App() {
         <SignUp minLength={12} />
         <Button handleUpdate={console.log} />
         <Form handleSubmit={console.log} />
+        <Clicked />
+        <Square color="hotpink" />
+        <ToggleText initial="Hello" alternate="World" />
+        <Counter initial={50} max={100} />
+
       </Route>
 
 
-      <Route exact path="/week10-practice-app/news" component={Articles} />
 
-      {/* <Route exact path="/week9-practice-app/challenges" component={Challenges} />
+      <Switch>
+        <Route exact path="/week10-practice-app/news/create" component={CreateArticle} />
 
-        <Route exact path="/week9-practice-app/quiz" component={Quiz} /> */}
+        <Route exact path="/week10-practice-app/news" component={Articles} />
+
+        <Route exact path="/week10-practice-app/news/:id" render={({ match }) => (
+          <Article id={match.params.id} />
+        )} />
+
+      </Switch>
+
+
 
     </Router>
   );
