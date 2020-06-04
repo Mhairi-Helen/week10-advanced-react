@@ -41,7 +41,7 @@ class CreateArticle extends Component {
         axios.post("/articles", {
             title: title,
             content: content,
-            tags: tags.split(", "),
+            tags: tags.split(/\s*,\s*/),
         }).then(() => {
             //clear fields on submission
             this.setState({
@@ -58,7 +58,7 @@ class CreateArticle extends Component {
         let { title, content, tags } = this.state;
 
         return (
-            <form onSubmit={this.formSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <div className="form-group" >
                     <label htmlFor="title">Article Title</label>
                     <input type="text" className="form-control" id="title" placeholder="Title of post" onChange={this.handleTitle} value={title} />
@@ -76,7 +76,7 @@ class CreateArticle extends Component {
 
 
                 <input
-                    type="submit" value="Submit" className="btn-primary" />
+                    type="submit" value="Submit" variant="info" />
             </form>
         );
     };

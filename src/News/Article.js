@@ -42,12 +42,9 @@ class Article extends Component {
                     <button className="btn btn-info">{tag}</button>))
                 }
                 <Comments id={article.id} />
-
-
             </>
         );
     }
-
 };
 
 export default Article;

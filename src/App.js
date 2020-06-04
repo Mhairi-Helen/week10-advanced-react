@@ -21,6 +21,9 @@ import Clicked from "./Hooks/Clicked";
 import Square from "./Hooks/Square";
 import ToggleText from "./Hooks/ToggleText";
 import Counter from "./Hooks/Counter";
+import StepCounter from "./Hooks/StepCounter";
+// import CatchMeIfYouCan from "./Hooks/CatchMeIfYouCan";
+import RollCall from "./Hooks/RollCall"
 
 function App() {
   return (
@@ -39,7 +42,16 @@ function App() {
         <Square color="hotpink" />
         <ToggleText initial="Hello" alternate="World" />
         <Counter initial={50} max={100} />
-
+        <StepCounter step={5} max={100} />
+        {/* <CatchMeIfYouCan jump={100} /> */}
+        <RollCall names={[
+          "James P. Sullivan",
+          "Mike Wazowski",
+          "Boo",
+          "Randall Boggs",
+          "Roz",
+          "Fungus",
+        ]} />
       </Route>
 
 
